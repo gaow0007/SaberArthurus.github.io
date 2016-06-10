@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Last Journey</title>
+    <description>记录改变
+</description>
+    <link>https://saberarthurus.github.com/TheLastJourney/</link>
+    <atom:link href="https://saberarthurus.github.com/TheLastJourney/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 10 Jun 2016 10:44:43 +0800</pubDate>
+    <lastBuildDate>Fri, 10 Jun 2016 10:44:43 +0800</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>博客新址</title>
+        <description>
+</description>
+        <pubDate>Fri, 10 Jun 2016 00:28:56 +0800</pubDate>
+        <link>https://saberarthurus.github.com/TheLastJourney/tech/2016/06/10/1.html</link>
+        <guid isPermaLink="true">https://saberarthurus.github.com/TheLastJourney/tech/2016/06/10/1.html</guid>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+  </channel>
+</rss>

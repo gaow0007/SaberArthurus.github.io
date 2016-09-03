@@ -6,130 +6,272 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 16 Jun 2016 01:44:44 +0800</pubDate>
-    <lastBuildDate>Thu, 16 Jun 2016 01:44:44 +0800</lastBuildDate>
+    <pubDate>Sat, 03 Sep 2016 15:03:40 +0800</pubDate>
+    <lastBuildDate>Sat, 03 Sep 2016 15:03:40 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>1</title>
-        <description>&lt;p&gt;&lt;code&gt;
-第一部分：数据科学中的数学基础
-第1课 基本概念、函数  
-集合、等势、确界、函数、映射、实数集、函数、函数的性质、初等函数
-第2课 序列极限  
-序列极限的定义、ε-N语言、无穷小量、无穷大量、夹逼定理、极限性质、Stolz公式、重要极限
-第3课 函数极限与连续函数   
-函数极限的定义、性质、序列极限和函数极限关系、极限存在定理、重要极限、连续函数的性质、闭区间上得连续函数
-第4课 导数与微分 
-导数、求导数的方法、微分、高阶导数与高阶微分
-第5课 微分中值定理 
-微分中值定理、洛必达法则
-第6课 泰勒公式 
-泰勒展开、泰勒公式的余项、函数凹凸性、导数的应用
-第7课 积分 
-不定积分、定积分、变上限定积分、微积分基本定理、换元与分部积分法、可积函数类、定积分的应用、广义积分
-第8课 多元函数微分学（上）
-多元函数概念、多元函数极限、偏导数、全微分、复合函数和隐函数的微分、方向导数、梯度
-第9课 多元函数微分学（下） 
-多元函数微分中值定理及泰勒公式、隐函数存在定理
-第10课 线性方程组和行列式 
-高斯约当算法、行列式的定义、行列式展开、向量空间、线性相关与线性无关、向量组的秩、矩阵的秩、线性方程组解集结构
-第11课 矩阵运算 
-矩阵运算、矩阵乘积、可逆矩阵、分块矩阵、正交矩阵
-第12课 矩阵的相似与合同 
-矩阵相似、特征值、特征向量、实对称矩阵的对角化、二次型、正定二次型与正定矩阵
-第13课 矩阵分解 
-LU分解，Cholesky分解、QR分解、SVD分解
-第14课 最优化问题 
-范数、凸函数、凸集、广义逆、秩一校正、共轭函数、线搜索
-第15课 使用导数的最优化方法 
-最速下降法、牛顿法、共轭梯度法、拟牛顿法
-第16课 对偶理论 
-KKT条件、线性规划、凸规划、拉格朗日乘子
-第17课 二次规划
-&lt;/code&gt;&lt;/p&gt;
+        <title>Caffe学习笔记 —— proto</title>
+        <description>&lt;h3 id=&quot;sparse&quot;&gt;&lt;strong&gt;1 sparse&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;保证网络权值参数有多大的概率能够为0， 注意 caffe中L!正则化效果较差
+适用条件：未知&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code&gt;
-第二部分：数据科学中的概率论
-第1课：事件与概率
-概率导论，事件及其运算，古典概型与几何概型，主要介绍概率论发展历史上主要研究的两种概率模型和概率论公理化体系
-第2课：条件概率与统计独立性
-条件概率，贝叶斯公式，统计独立性
-第3课：随机变量与分布函数
-随机变量及其分布，离散型随机变量，连续型随机变量， 随机变量的联合分布和边际分布， 随机变量的条件分布， 随机变量的独立性，随机变量的函数及其分布，共轭分布，次序统计量
-第4课：数字特征与特征函数
-期望与方差，协方差与相关系数，条件期望及预测， 熵与不确定性，特征函数
-第5课：极限定理
-极限定理基础，大数定律，中心极限定律
-第6课：随机过程
-随机过程基础，马尔可夫链，高斯过程
-第7课：统计模拟
-统计模拟基础，统计模拟应用，MCMC
-&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;variancenorm&quot;&gt;&lt;strong&gt;2 VarianceNorm&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;为了保证数据经过改成时方差保证一致
+适用条件：在初始化的时候有较好的正则泛化效果
+相关参数: “FAN_IN, FAN_OUT, AVERAGE”&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code&gt;
-第三部分：数据科学中的统计基础
-第1课：数理统计学的基本知识
-第2课：估计
-参数估计的方法（最大似然，矩估计），估计的优良性标准（最小方差无偏估计），置信区间，分布函数与密度函数的估计
-第3课：假设检验
-问题描述，似然比检验，单参数情形的假设检验，广义似然比检验，p值，拟合优度检验，非参检验
-第4课：抽样调查的意义与作用（主要应用）
-第5课：抽样调查的基本概念
-总体与样本，几种基本的抽样方法，简单随机抽样(详细)，分层抽样，整群抽样，二阶与多阶抽样，系统抽样，不等概率抽样，误差与精度的表示方法
-第6课：试验设计简介
-试验设计问题的提法与数学模型，正交表与正交设计
-第7课：多元统计分析的意义与作用
-第8课：多元正态分布及参数的估计
-随机向量，多元正态分布的定义与基本性质，条件分布和独立性，随机阵的正态分布，多元正态分布的参数估计
-第9课：多元正态总体参数的假设检验
-几个重要统计量的分布，单总体均值向量的检验及置信域，多总体均值向量的检验，协方差阵的检验，独立性检验，正态性检验
-第10课：判别分析（与支持向量机的联系）
-距离判别，Bayes判别法及广义平方距离判别法，Fisher判别，判别效果的检验及各变量判别能力的检验，逐步判别
-第11课：聚类分析
-聚类分析的方法，距离与相似系数，系统聚类法，系统聚类法的性质及类的确定
-第12课：主成分分析
-总体的主成分，样本的主成分，主成分分析的应用
-第13课：因子分析
-因子模型，参数估计方法，方差最大的正交旋转，因子得分
-第14课：简单线性回归
-建立简单回归模型，最小二乘估计，估计sigma2，最小二乘估计的性质，模型的比较：方差分析，测定系数，R2，置信区间和检验，残差
-第15课：多元回归
-在简单回归模型上增加一个自变量，回归的矩阵表示，方差分析，附加变量图，通过原点的回归
-第16课：结果分析
-解释参数估计值，抽样在回归中的作用，含测量误差的自变量
-第17课：诊断一：残差及影响
-第18课：诊断二：症状与治疗
-散点图，非常数方差，非线性，变换响应变量，变换自变量，正态性假设
-第19课：建立模型一：定义新的自变量
-多项式回归，虚拟变量：二分类／多分类，比较回归直线，变量的尺度，线性变换及主成分
-第20课：建立模型二：共线性与变量选择
-什么是共线性，为什么共线性是一个问题，共线性的度量，变量选择，假设和记号，根据实际意义选择子集，求子集：逐步回归，选择一个子集的准则，求子集：所有可能的回归，求子集：LASSO；求子集：LARS
-第21课：非最小二乘估计
-ridge，主成分回归，偏最小二乘回归
-第22课：线性回归的推广
-广义线性模型（logistic、poisson），非线性回归，统计决策与bayes统计，统计决策问题概述，什么是bayes统计（著名的三羊问题），共轭分布
-第24课：马氏模型
-基本概念，隐马氏模型，隐马氏模型理论，隐马氏模型应用
-&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;debuginfo&quot;&gt;&lt;strong&gt;3 debug_info&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;用于输出diff信息以及forward的数值
+有一种不正规的说法：保证diff在同一个数量级上，能够有效的防止梯度消失&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
-        <pubDate>Thu, 16 Jun 2016 00:00:00 +0800</pubDate>
-        <link>/2016/06/16/1.html</link>
-        <guid isPermaLink="true">/2016/06/16/1.html</guid>
+        <pubDate>Sat, 03 Sep 2016 14:37:18 +0800</pubDate>
+        <link>/tech/2016/09/03/2.html</link>
+        <guid isPermaLink="true">/tech/2016/09/03/2.html</guid>
         
+        
+        <category>tech</category>
         
       </item>
     
       <item>
-        <title>博客新址</title>
-        <description>
+        <title>Machine Learning —— Compulsory mathematics</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;&lt;strong&gt;第一部分：数据科学中的数学基础&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;第1课 基本概念、函数&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;集合、等势、确界、函数、映射、实数集、函数、函数的性质、初等函数&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-2&quot;&gt;第2课 序列极限&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;序列极限的定义、ε-N语言、无穷小量、无穷大量、夹逼定理、极限性质、Stolz公式、重要极限&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-3&quot;&gt;第3课 函数极限与连续函数&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;函数极限的定义、性质、序列极限和函数极限关系、极限存在定理、重要极限、连续函数的性质、闭区间上得连续函数&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-4&quot;&gt;第4课 导数与微分&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;导数、求导数的方法、微分、高阶导数与高阶微分&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-5&quot;&gt;第5课 微分中值定理&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;微分中值定理、洛必达法则&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-6&quot;&gt;第6课 泰勒公式&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;泰勒展开、泰勒公式的余项、函数凹凸性、导数的应用&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-7&quot;&gt;第7课 积分&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;不定积分、定积分、变上限定积分、微积分基本定理、换元与分部积分法、可积函数类、定积分的应用、广义积分&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-8&quot;&gt;第8课 多元函数微分学（上）&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;多元函数概念、多元函数极限、偏导数、全微分、复合函数和隐函数的微分、方向导数、梯度&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-9&quot;&gt;第9课 多元函数微分学（下）&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;多元函数微分中值定理及泰勒公式、隐函数存在定理&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-10&quot;&gt;第10课 线性方程组和行列式&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;高斯约当算法、行列式的定义、行列式展开、向量空间、线性相关与线性无关、向量组的秩、矩阵的秩、线性方程组解集结构&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-11&quot;&gt;第11课 矩阵运算&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;矩阵运算、矩阵乘积、可逆矩阵、分块矩阵、正交矩阵&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-12&quot;&gt;第12课 矩阵的相似与合同&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;矩阵相似、特征值、特征向量、实对称矩阵的对角化、二次型、正定二次型与正定矩阵&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-13&quot;&gt;第13课 矩阵分解&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;LU分解，Cholesky分解、QR分解、SVD分解&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-14&quot;&gt;第14课 最优化问题&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;范数、凸函数、凸集、广义逆、秩一校正、共轭函数、线搜索&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-15&quot;&gt;第15课 使用导数的最优化方法&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;最速下降法、牛顿法、共轭梯度法、拟牛顿法&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-16&quot;&gt;第16课 对偶理论&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;KKT条件、线性规划、凸规划、拉格朗日乘子、二次规划&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;section-17&quot;&gt;&lt;strong&gt;第二部分：数据科学中的概率论&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;h1 id=&quot;section-18&quot;&gt;第1课：事件与概率&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;概率导论，事件及其运算，古典概型与几何概型，主要介绍概率论发展历史上主要研究的两种概率模型和概率论公理化体系&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-19&quot;&gt;第2课：条件概率与统计独立性&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;条件概率，贝叶斯公式，统计独立性&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-20&quot;&gt;第3课：随机变量与分布函数&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;随机变量及其分布，离散型随机变量，连续型随机变量， 随机变量的联合分布和边际分布， 随机变量的条件分布， 随机变量的独立性，随机变量的函数及其分布，共轭分布，次序统计量&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-21&quot;&gt;第4课：数字特征与特征函数&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;期望与方差，协方差与相关系数，条件期望及预测， 熵与不确定性，特征函数&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-22&quot;&gt;第5课：极限定理&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;极限定理基础，大数定律，中心极限定律&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-23&quot;&gt;第6课：随机过程&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;随机过程基础，马尔可夫链，高斯过程&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-24&quot;&gt;第7课：统计模拟&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;统计模拟基础，统计模拟应用，MCMC&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;section-25&quot;&gt;&lt;strong&gt;第三部分：数据科学中的统计基础&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;h1 id=&quot;section-26&quot;&gt;第1课：数理统计学的基本知识&lt;/h1&gt;
+
+&lt;h1 id=&quot;section-27&quot;&gt;第2课：估计&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;参数估计的方法（最大似然，矩估计），估计的优良性标准（最小方差无偏估计），置信区间，分布函数与密度函数的估计&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-28&quot;&gt;第3课：假设检验&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;问题描述，似然比检验，单参数情形的假设检验，广义似然比检验，p值，拟合优度检验，非参检验#&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-29&quot;&gt;第4课：抽样调查的意义与作用（主要应用）&lt;/h1&gt;
+
+&lt;h1 id=&quot;section-30&quot;&gt;第5课：抽样调查的基本概念&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;总体与样本，几种基本的抽样方法，简单随机抽样(详细)，分层抽样，整群抽样，二阶与多阶抽样，系统抽样，不等概率抽样，误差与精度的表示方法&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-31&quot;&gt;第6课：试验设计简介&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;试验设计问题的提法与数学模型，正交表与正交设计&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-32&quot;&gt;第7课：多元统计分析的意义与作用&lt;/h1&gt;
+
+&lt;h1 id=&quot;section-33&quot;&gt;第8课：多元正态分布及参数的估计&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;随机向量，多元正态分布的定义与基本性质，条件分布和独立性，随机阵的正态分布，多元正态分布的参数估计&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-34&quot;&gt;第9课：多元正态总体参数的假设检验&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;几个重要统计量的分布，单总体均值向量的检验及置信域，多总体均值向量的检验，协方差阵的检验，独立性检验，正态性检验&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-35&quot;&gt;第10课：判别分析（与支持向量机的联系）&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;距离判别，Bayes判别法及广义平方距离判别法，Fisher判别，判别效果的检验及各变量判别能力的检验，逐步判别&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-36&quot;&gt;第11课：聚类分析&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;聚类分析的方法，距离与相似系数，系统聚类法，系统聚类法的性质及类的确定&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-37&quot;&gt;第12课：主成分分析&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;总体的主成分，样本的主成分，主成分分析的应用&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-38&quot;&gt;第13课：因子分析&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;因子模型，参数估计方法，方差最大的正交旋转，因子得分&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-39&quot;&gt;第14课：简单线性回归&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;建立简单回归模型，最小二乘估计，估计sigma2，最小二乘估计的性质，模型的比较：方差分析，测定系数，R2，置信区间和检验，残差&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-40&quot;&gt;第15课：多元回归&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;在简单回归模型上增加一个自变量，回归的矩阵表示，方差分析，附加变量图，通过原点的回归&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-41&quot;&gt;第16课：结果分析&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;解释参数估计值，抽样在回归中的作用，含测量误差的自变量&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-42&quot;&gt;第17课：诊断一：残差及影响&lt;/h1&gt;
+
+&lt;h1 id=&quot;section-43&quot;&gt;第18课：诊断二：症状与治疗&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;散点图，非常数方差，非线性，变换响应变量，变换自变量，正态性假设&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-44&quot;&gt;第19课：建立模型一：定义新的自变量&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;多项式回归，虚拟变量：二分类／多分类，比较回归直线，变量的尺度，线性变换及主成分&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-45&quot;&gt;第20课：建立模型二：共线性与变量选择&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;什么是共线性，为什么共线性是一个问题，共线性的度量，变量选择，假设和记号，根据实际意义选择子集，求子集：逐步回归，选择一个子集的准则，求子集：所有可能的回归，求子集：LASSO；求子集：LARS&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-46&quot;&gt;第21课：非最小二乘估计&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;ridge，主成分回归，偏最小二乘回归&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-47&quot;&gt;第22课：线性回归的推广&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;广义线性模型（logistic、poisson），非线性回归，统计决策与bayes统计，统计决策问题概述，什么是bayes统计（著名的三羊问题），共轭分布&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;section-48&quot;&gt;第24课：马氏模型&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;基本概念，隐马氏模型，隐马氏模型理论，隐马氏模型应用&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
-        <pubDate>Fri, 10 Jun 2016 00:28:56 +0800</pubDate>
-        <link>/tech/2016/06/10/1.html</link>
-        <guid isPermaLink="true">/tech/2016/06/10/1.html</guid>
+        <pubDate>Sat, 03 Sep 2016 13:52:03 +0800</pubDate>
+        <link>/math/2016/09/03/1.html</link>
+        <guid isPermaLink="true">/math/2016/09/03/1.html</guid>
         
         
-        <category>tech</category>
+        <category>math</category>
         
       </item>
     

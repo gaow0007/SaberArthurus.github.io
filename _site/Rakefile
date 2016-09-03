@@ -2,7 +2,7 @@ task :default => [:new_post]
 
 desc "Create a new Post"
 task :new_post do
-  filename = "_posts/#{Time.now.strftime('%Y-%m-%d')}-1.md"
+  filename = "_posts/#{Time.now.strftime('%Y-%m-%d')}-3.md"
   if File.exist?(filename)
     abort("#{filename} exist")
   end

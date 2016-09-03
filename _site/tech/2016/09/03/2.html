@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>博客新址</title>
-  <meta name="description" content="">
+  <title>Caffe学习笔记 —— proto</title>
+  <meta name="description" content="1 sparse  保证网络权值参数有多大的概率能够为0， 注意 caffe中L!正则化效果较差适用条件：未知">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/tech/2016/06/10/1.html">
+  <link rel="canonical" href="/tech/2016/09/03/2.html">
   <link rel="alternate" type="application/rss+xml" title="The Last Journey" href="/feed.xml">
 </head>
 
@@ -57,12 +57,29 @@
         <article class="post" itemscope itemtype="http://github.com/SaberArthurus">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">博客新址</h1>
-    <p class="post-meta"><time datetime="2016-06-10T00:28:56+08:00" itemprop="datePublished">Jun 10, 2016</time></p>
+    <h1 class="post-title" itemprop="name headline">Caffe学习笔记 —— proto</h1>
+    <p class="post-meta"><time datetime="2016-09-03T14:37:18+08:00" itemprop="datePublished">Sep 3, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    
+    <h3 id="sparse"><strong>1 sparse</strong></h3>
+<blockquote>
+  <p>保证网络权值参数有多大的概率能够为0， 注意 caffe中L!正则化效果较差
+适用条件：未知</p>
+</blockquote>
+
+<h3 id="variancenorm"><strong>2 VarianceNorm</strong></h3>
+<blockquote>
+  <p>为了保证数据经过改成时方差保证一致
+适用条件：在初始化的时候有较好的正则泛化效果
+相关参数: “FAN_IN, FAN_OUT, AVERAGE”</p>
+</blockquote>
+
+<h3 id="debuginfo"><strong>3 debug_info</strong></h3>
+<blockquote>
+  <p>用于输出diff信息以及forward的数值
+有一种不正规的说法：保证diff在同一个数量级上，能够有效的防止梯度消失</p>
+</blockquote>
 
   </div>
 

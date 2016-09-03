@@ -6,8 +6,8 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Sep 2016 15:03:40 +0800</pubDate>
-    <lastBuildDate>Sat, 03 Sep 2016 15:03:40 +0800</lastBuildDate>
+    <pubDate>Sat, 03 Sep 2016 23:32:32 +0800</pubDate>
+    <lastBuildDate>Sat, 03 Sep 2016 23:32:32 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -29,6 +29,51 @@
 &lt;blockquote&gt;
   &lt;p&gt;用于输出diff信息以及forward的数值
 有一种不正规的说法：保证diff在同一个数量级上，能够有效的防止梯度消失&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;stepsize&quot;&gt;&lt;strong&gt;4 stepsize&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;the stepsize for learning rate policy “step”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;stepvalue&quot;&gt;&lt;strong&gt;5 stepvalue&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;the stepvalue for learning rate policy “multistep”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;clipgradients&quot;&gt;&lt;strong&gt;6 clip_gradients&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;unknow&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;snapdiff&quot;&gt;&lt;strong&gt;7 snap_diff&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;easy to know&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;snapshotformat&quot;&gt;&lt;strong&gt;8 SnapshotFormat&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;enum {HDF5, BINARYPROTO}&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;type-default--sgd&quot;&gt;&lt;strong&gt;9 type [default = “SGD”]&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;others to be exploring&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;solvertype&quot;&gt;&lt;strong&gt;10 SolverType&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;hyper link&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;solverstate&quot;&gt;&lt;strong&gt;11 SolverState&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;enum{iter, learned_net, history, current_step}&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;levelnetstate&quot;&gt;&lt;strong&gt;12 level(NetState)&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;to be exploring&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
         <pubDate>Sat, 03 Sep 2016 14:37:18 +0800</pubDate>

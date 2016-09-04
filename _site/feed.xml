@@ -2,13 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Last Journey</title>
-    <description>记录改变
-</description>
+    <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Sep 2016 23:32:32 +0800</pubDate>
-    <lastBuildDate>Sat, 03 Sep 2016 23:32:32 +0800</lastBuildDate>
+    <pubDate>Sun, 04 Sep 2016 09:46:10 +0800</pubDate>
+    <lastBuildDate>Sun, 04 Sep 2016 09:46:10 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>学习速率的方法</title>
+        <description>&lt;p&gt;&lt;code&gt;
+// The learning rate decay policy. The currently implemented learning rate
+// policies are as follows:
+//    - fixed: always return base_lr.
+//    - step: return base_lr * gamma ^ (floor(iter / step))
+//    - exp: return base_lr * gamma ^ iter
+//    - inv: return base_lr * (1 + gamma * iter) ^ (- power)
+//    - multistep: similar to step but it allows non uniform steps defined by
+//      stepvalue
+//    - poly: the effective learning rate follows a polynomial decay, to be
+//      zero by the max_iter. return base_lr (1 - iter/max_iter) ^ (power)
+//    - sigmoid: the effective learning rate follows a sigmod decay
+//      return base_lr ( 1/(1 + exp(-gamma * (iter - stepsize))))
+//
+// where base_lr, max_iter, gamma, step, stepvalue and power are defined
+// in the solver parameter protocol buffer, and iter is the current iteration.
+&lt;/code&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 04 Sep 2016 09:12:29 +0800</pubDate>
+        <link>/tech/2016/09/04/3.html</link>
+        <guid isPermaLink="true">/tech/2016/09/04/3.html</guid>
+        
+        
+        <category>tech</category>
+        
+      </item>
     
       <item>
         <title>Caffe学习笔记 —— proto</title>

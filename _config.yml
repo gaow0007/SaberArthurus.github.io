@@ -9,7 +9,6 @@
 title: The Last Journey
 email: SaberArthurus@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  记录改变
 baseurl:  # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 twitter_username: SaberArthurus

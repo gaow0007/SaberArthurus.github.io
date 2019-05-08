@@ -8,6 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
+[More information here](http://SaberArthurus.github.io/files/Taskonomy.pdf)
 
 Education
 ======
@@ -15,15 +16,25 @@ Education
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Sep 2017 -- Jun 2018: Research Intern
+  * SenseTime Beijing Group Limited
+  * Duties included: Model Acceleration
+  * Supervisor: Quanquan Li and [Junjie Yan](https://dblp.uni-trier.de/pers/hd/y/Yan:Junjie)
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Sep 2017 -- Jun 2018: Visiting Student
+  * UC Merced
+  * Duties included: Low Level Vision, Especially Style Transfer
+  * Supervisor: [Yijun Li](https://sites.google.com/site/yijunlimaverick/) and [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/)
+
+* Oct 2018 -- Now: Research Intern
+  * Peking University
+  * Duties included: Knowledge Distillation and Beyond
+  * Supervisor: [Zhanxin Zhu](sites.google.com/view/zhanxingzhu/home)
+
+* Mar 2019 -- Now Research Intern
+  * RealAI
+  * Duties included: Create Realiable AI System
+  * Supervisor: Zihao Xiao
   
 Skills
 ======
@@ -46,7 +57,7 @@ Talks
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
   
-Teaching
+Projects
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}

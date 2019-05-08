@@ -10,4 +10,4 @@ citation:
 ---
 This is a work aiming for boosting all the existing pruning and mimic method.
 
-[Download paper here](https://openreview.net/pdf?id=Hyffti0ctQ)
+[Download paper here](https://openreview.net/forum?id=Hyffti0ctQ)

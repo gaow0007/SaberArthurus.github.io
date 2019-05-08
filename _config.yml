@@ -85,16 +85,16 @@ author:
   bio              : "Research Intern in RealAI"
   location         : "Beijing China"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "http://scholar.google.com/gaoawei"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  email            : "weigao1996@outlook.com"
+  researchgate     :  "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "https://facebook.com/SaberGaoWei"
   foursquare       :
   github           : "SaberArthurus"
   google_plus      :

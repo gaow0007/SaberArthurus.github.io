@@ -86,7 +86,7 @@ author:
   location         : "Beijing China"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://scholar.google.com/gaoawei"
+  googlescholar    : # "http://scholar.google.com/gaowei"
   email            : "weigao1996@outlook.com"
   researchgate     :  "https://www.researchgate.net/profile/yourprofile"
   uri              :

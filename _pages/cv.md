@@ -29,7 +29,7 @@ Work experience
 * Oct 2018 -- Now: Research Intern
   * Peking University
   * Duties included: Knowledge Distillation and Beyond
-  * Supervisor: [Zhanxin Zhu](sites.google.com/view/zhanxingzhu/home)
+  * Supervisor: [Zhanxin Zhu](https://sites.google.com/view/zhanxingzhu/home)
 
 * Mar 2019 -- Now Research Intern
   * RealAI

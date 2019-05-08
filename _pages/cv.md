@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-[More information here](http://SaberArthurus.github.io/files/Taskonomy.pdf)
+[More information here](http://SaberArthurus.github.io/files/cv.pdf)
 
 Education
 ======

@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "The Last Journey"
+title                    : "For good science: tune baseline's hyperparameters"
 title_separator          : "-"
 name                     : &name "Wei Gao"
 description              : &description "Research Intern in RealAI"

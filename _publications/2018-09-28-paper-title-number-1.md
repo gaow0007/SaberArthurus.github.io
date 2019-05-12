@@ -5,8 +5,8 @@ permalink: /publication/2018-09-02-paper-title-number-1
 excerpt: 'This is a work aiming for boosting all the existing pruning and mimic method.'
 date: 2018-09-28
 venue: 'Sep 28'
-paperurl: 'https://openreview.net/pdf?id=Hyffti0ctQ'
-citation: 
+paperurl: 'https://openreview.net/forum?id=Hyffti0ctQ'
+citation: 'Wei Gao*, Yi Wei*, Quanquan Li, Hongwei Qin, Wanli Ouyang, Junjie Yan; Technical Report.'
 ---
 
 [Download paper here](https://openreview.net/forum?id=Hyffti0ctQ)

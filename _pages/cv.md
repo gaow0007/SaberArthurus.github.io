@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-[More information here](http://SaberArthurus.github.io/files/cv.pdf)
+[More information here](http://SaberArthurus.github.io/files/CV.pdf)
 
 Education
 ======
@@ -26,12 +26,12 @@ Work experience
   * Duties included: Low Level Vision, Especially Style Transfer
   * Supervisor: [Yijun Li](https://sites.google.com/site/yijunlimaverick/) and [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/)
 
-* Oct 2018 -- Now: Research Intern
+* Oct 2018 -- Jun 2019
   * Peking University
   * Duties included: Knowledge Distillation and Beyond
   * Supervisor: [Zhanxin Zhu](https://sites.google.com/view/zhanxingzhu/home)
 
-* Mar 2019 -- Now Research Intern
+* Jun 2019 -- Now Researcher
   * RealAI
   * Duties included: Create Realiable AI System
   * Supervisor: Zihao Xiao
@@ -48,7 +48,7 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
+<!-- Talks
 ======
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
@@ -58,4 +58,4 @@ Projects
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ul> -->
